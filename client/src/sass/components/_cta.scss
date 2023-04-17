@@ -1,0 +1,42 @@
+.cta{ // cta container
+    position: relative !important;
+    display: grid !important;
+    place-items: center !important;
+    // top: 20rem !important;
+    // width: 22rem  !important;
+    &__request{ // cta__request
+      @include respond(desktop-big) { top: 16rem !important; width: 20rem !important;}
+      @include respond(desktop)     { top: 16rem !important; width: 20rem !important;}
+      @include respond(tab-land)    { top: 7rem !important; }
+      @include respond(tab-port)    { top: 4rem !important; }
+      @include respond(phone)       { top: 10rem !important; }
+      @include respond(phone-small) { top: 10rem !important; }
+
+      &-footer{ // cta__request-footer
+        @include respond(desktop-big) { bottom: 41.5rem !important; left: 40rem !important;}
+        @include respond(desktop)     { bottom: 41.5rem !important; left: 40rem !important;}
+        @include respond(tab-land)    { bottom: 39.6rem !important; left: 38rem !important;}
+        @include respond(tab-port)    { bottom: 33.5rem !important;  left: 0rem !important; }
+        @include respond(phone)       { bottom: 32.4rem !important; left: 0rem !important; }
+        @include respond(phone-small) { bottom: 32.5rem !important; }
+      }
+    }
+    &__logout{// cta__logout
+      @include respond(desktop-big) { left: -65rem !important; top: -26rem !important;}
+      @include respond(desktop)     { left: -43rem !important; top: -24rem !important;}
+      @include respond(tab-land)    { left: -40rem !important; top: -35.7rem !important;}
+      @include respond(tab-port)    { left: -28rem !important; top: -41.5rem !important;}
+      @include respond(phone)       { left: -20rem !important; top: -38rem !important;}
+      @include respond(phone-small) { left: -13rem !important; top: -29rem !important;}
+      
+      &-footer{ // cta__logout-footer
+        @include respond(desktop-big) { bottom: 41.5rem !important; left: 40rem !important;}
+        @include respond(desktop)     { bottom: 41.5rem !important; left: 40rem !important;}
+        @include respond(tab-land)    { bottom: 39.6rem !important; left: 38rem !important;}
+        @include respond(tab-port)    { bottom: 33.5rem !important;  left: 0rem !important; }
+        @include respond(phone)       { bottom: 32.4rem !important; left: 0rem !important; }
+        @include respond(phone-small) { bottom: 32.5rem !important; }
+      }
+    }
+  }
+

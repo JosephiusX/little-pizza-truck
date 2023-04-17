@@ -1,0 +1,221 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        border-radius: 2rem;
+        position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        outline-offset: 2rem;
+
+        @include respond(tab-port) {
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
+        &--p0 {
+            left: 37rem;
+            top: 11rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 11rem;
+                left: 33rem;
+
+                transform: scale(1.7);
+            }
+        }
+
+
+        &--p1 {
+            top: 11rem;
+            left: 4rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 14rem;
+                left: -14rem;
+
+                transform: scale(1.7);
+            }
+        }
+
+        &--p2 {
+            right: 86rem;
+            top:43rem;
+            transform: scale(1);
+            
+            @include respond(tab-port)  {
+                top: 48rem;
+                left: -0.5rem;
+                
+                transform: scale(1.7);
+            }
+        }
+
+        &--p3 {
+            right: 53rem;
+            top: 43rem;
+            transform: scale(1);
+            
+            @include respond(tab-port)  {
+                top: 45rem;
+                left: -30.6rem;
+
+                transform: scale(1.7);
+            }
+        }
+        
+        &--p4 {
+            top: 67rem;
+            right: 20.3rem;
+            transform: scale(1);
+            
+            @include respond(tab-port)  {
+                top: 34.5rem;
+                left: 32.7rem;
+                
+                transform: scale(1.7);
+            }
+        }
+
+        &--p5 {
+            right: -12.7rem;
+            top: 50rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 61rem;
+                left: -14rem;
+                
+                transform: scale(1.7);
+            }
+        }
+        
+        &--p6 {
+            right: -13rem;
+            top: 72rem;
+            transform: scale(1);
+            
+            @include respond(tab-port)  {
+                top: 71.4rem;
+                left: -0.5rem;
+                
+                transform: scale(1.7);
+            }
+        }
+        
+        &--p7 {
+            right: 86rem;
+            top: 83rem;
+            transform: scale(1);
+            
+            @include respond(tab-port)  {
+                top: 60.5rem;
+                left: 2.5rem;
+                
+                transform: scale(1.7);
+            }
+        }
+        
+        &--p8 {
+            right: 86rem;
+            top: 106rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 81rem;
+                left: -14rem;
+                
+                transform: scale(1.7);
+            }
+        }
+        
+        &--p9 {
+            right: 53rem;
+            top: 98rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 86rem;
+                left: -0.5rem;
+
+                transform: scale(1.7);
+            }
+        }
+
+        &--p10 {
+            right: 20rem;
+            top: 107rem;
+            transform: scale(1);
+
+            @include respond(tab-port)  {
+                top: 88rem;
+                left: 2.7rem;
+
+                transform: scale(1.7);
+            }
+        }
+
+        &:hover {
+            // outline: 1.5rem solid $color-primary;
+            transform: scale(2.5) ;
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 200;
+
+            @include respond(desktop-big) {
+                transform: scale(1.5);
+                place-self: center;
+            }
+            @include respond(desktop) {
+                transform: scale(1.5);
+                place-self: center;
+            }
+            @include respond(tab-land) {
+                transform: scale(2);
+                place-self: center;
+            }
+            @include respond(tab-port) {
+                transform: scale(2.9);
+                place-self: center;
+            }
+            @include respond(phone) {
+                transform: scale(2.5);
+                place-self: center;
+            }
+            @include respond(phone-small) {
+                transform: scale(1);
+                place-self: center;
+            }
+        }
+
+    }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(1.7);
+
+        @include respond(desktop-big) {
+            transform: scale(1);
+        }
+        @include respond(desktop) {
+            transform: scale(1);
+        }
+        @include respond(tab-land) {
+            transform: scale(1);
+        }
+        @include respond(tab-port) {
+            transform: scale(1.7);
+        }
+        @include respond(phone) {
+            transform: scale(1.7);
+        }
+        @include respond(phone-small) {
+            transform: scale(1.7);
+        }
+    }
+    //composition:hover composition__photo:not(:hover) {
+    }

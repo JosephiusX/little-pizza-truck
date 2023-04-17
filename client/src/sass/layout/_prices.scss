@@ -1,0 +1,74 @@
+.prices {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-grey-dark-2, 0.7),
+      rgba($color-grey-dark-3, 0.3)),
+  url(../img/truck-bridge.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  
+  @include respond(desktop-big) {
+    background-position-y: -85rem;
+  }
+  @include respond(desktop) {
+    background-position: bottom;
+  }
+  @include respond(tab-land) {
+    background-position: center;
+  }
+  @include respond(tab-port) {
+    background-position-y: -5rem;
+  }
+  @include respond(phone) {
+    background-position-y: -1rem;
+  }
+  @include respond(phone-small) {
+    background-position-y: -10rem;
+  }
+
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 85%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 85%);
+    height: 95vh;
+
+}
+
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+only screen and (min-width: 125em) {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-grey-dark-2, 0.7),
+    rgba($color-grey-dark-3, 0.3)),
+          url(../img/truck-bridge-large.jpg);
+          // ackground-size: cover;
+          background-position-y: -95rem;
+          position: relative;
+          background-size:80%;
+  }
+
+//   @include respond(phone) {
+//       -webkit-clip-path: polygon(0 0, 100% 0, 100% 45vh, 0 65%); // same as below
+//       clip-path: polygon(0 0, 100% 0, 100% 35vh, 0 65%);
+//   }
+
+  // &__logo-box {
+  //     position: absolute;
+  //     top: 4rem;
+  //     left: 4rem;
+  // }
+
+  // &__logo {
+  //     height: 3.5rem;
+  // }
+  
+  &__text-box {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+  }
+}

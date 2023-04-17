@@ -1,0 +1,42 @@
+.logo {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+
+  &__box { // responsive 
+    @include respond(desktop-big) { top: -9rem !important; }
+    @include respond(desktop)     { top: -8rem !important; }
+    @include respond(tab-land)    { top: -13em !important; }
+    @include respond(tab-port)    { top: -26rem !important; }
+    @include respond(phone)       { top: -23.4rem !important; }
+    @include respond(phone-small) { top: -4.5rem !important; }
+
+    &-footer { // logo__box-footer
+      @include respond(desktop-big) { top: -80rem !important; }
+      @include respond(desktop)     { top: -80rem !important; }
+      @include respond(tab-land)    { top: -79rem !important; }
+      @include respond(tab-port)    { top: -38rem !important; }
+      @include respond(phone)       { top: -49rem !important; }
+      @include respond(phone-small) { top: -46rem !important; left: -10rem; }
+    }
+  }
+    
+  &__icon { // logo__icon
+    @include respond(desktop-big) { width: 17rem !important; }
+    @include respond(desktop)     { width: 17rem !important; }
+    @include respond(tab-land)    { width: 16rem !important; }
+    @include respond(tab-port)    { width: 16rem !important; }
+    @include respond(phone)       { width: 15rem !important; }
+    @include respond(phone-small) { width: 13rem !important; }
+    
+    &-footer { // logo__icon-footer
+      position: relative !important;
+      @include respond(desktop-big) { width: 27rem !important; top: 92rem !important; }
+      @include respond(desktop)     { width: 27rem !important; top: 92rem !important; }
+      @include respond(tab-land)    { width: 26rem !important; top: 92rem !important; }
+      @include respond(tab-port)    { width: 16rem !important; top: 49rem !important; left: 0rem; }
+      @include respond(phone)       { width: 15rem !important; top: 59rem !important;left:0rem !important;  }
+      @include respond(phone-small) { width: 13rem !important; top:57rem !important; left: 11rem !important;  }
+    }
+  }
+}

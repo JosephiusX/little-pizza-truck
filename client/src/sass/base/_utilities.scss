@@ -1,0 +1,133 @@
+
+.u-center-text { text-align: center !important;}
+.u-color-white {color: $color-white !important;}
+.u-font-big {font-size: 3rem !important;}
+.u-font-medium {font-size: 2rem !important;}
+
+.u-margin-bottom-small { margin-bottom: 1.5rem !important;}
+.u-margin-bottom-medium {
+    margin-bottom: 4rem !important;
+    
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+    // @include respond(tab-port) {
+    //     margin-bottom: 5rem !important;
+    // }
+}
+.u-margin-bottom-big { 
+    margin-bottom: 8rem !important;
+    // @include respond(tab-port) {
+    //     margin-bottom: 5rem !important;
+    // }
+}
+
+.u-margin-top-big { margin-top: 8rem !important; }
+.u-margin-top-huge { margin-top: 10rem !important; }
+
+.absolute {position: absolute !important;}
+.relative {position: relative !important;}
+
+.u-z-index-1999 {z-index: 1999 !important;}
+
+
+.box { // header home icon
+    position:relative;
+    // top: 7rem;
+    display: grid;
+    place-items: center;
+}
+
+// .request-header { // Request event button Header
+//     position: absolute !important;
+//     display: grid !important;
+//     place-items: center !important;
+//     top: 29rem !important;
+//     width: 22rem  !important;
+    
+//     @include respond(desktop-big) {
+//         width: 20rem !important;
+//         top: 4rem !important;
+//     }
+//     @include respond(desktop) {
+//         width: 20rem !important;
+//         top: 4rem !important;
+//     }
+//     @include respond(tab-land) {
+//         top: -4rem !important;
+//     }
+//     @include respond(tab-port) {
+//         top: -7rem !important;
+//     }
+//     @include respond(phone) {
+//         top: -1rem !important;
+//     }
+//     @include respond(phone-small) {
+//         top: 1rem !important;
+//     }
+// }
+// .logout-header { // logout button header 
+//     position: relative !important;
+//     // display: grid !important;
+
+//     @include respond(desktop-big) {
+//         left: -60rem !important;
+//         top: -25rem !important;
+//         width: 12rem !important;
+//     }
+//     @include respond(desktop) {
+//         left: -43rem !important;
+//         top: -25rem !important;
+//         width: 12rem !important;
+//     }
+//     @include respond(tab-land) {
+//         left: -33rem !important;
+//         top: -35rem !important;
+//         width: 12rem !important;
+//     }
+//     @include respond(tab-port) {
+//         left: -28rem !important;
+//         top: -39rem !important;
+//         width: 12rem !important;
+//     }
+//     @include respond(phone) {
+//         left: -17rem !important;
+//         top: -45rem !important;
+//         width: 6rem !important;
+//     }
+//     @include respond(phone-small) {
+//         top: -35rem !important;
+//         left: -13rem !important;
+//     }
+
+// }
+
+
+// .logout-footer { // logout button footer
+//     bottom: 1.5rem !important;
+//     left: 14rem !important;
+//     z-index: 1999 !important;
+// }
+
+
+
+// .request-footer { // Request event button footer
+//     bottom: -3rem !important;
+//     left: 10rem !important;
+//     z-index: 1999 !important;
+//     position: absolute !important;
+//     width: 21rem !important;
+// }
+// .logo-footer { // footer home Icon
+//     z-index: 1999 !important;
+//     left: 11rem !important;
+//     bottom: 15rem !important;
+// }
+// .logo-foot{
+//     width: 19rem !important;
+//     height:19rem !important;
+// }
