@@ -1,5 +1,5 @@
 import React from 'react';
-import videoMp4 from '../img/video.mp4'
+// import videoMp4 from '../img/video.mp4'
 // import videoWebm from '../img/video.webm'
 
 const Menu = () => {
