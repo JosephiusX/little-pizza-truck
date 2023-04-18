@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import cookieSession from 'cookie-session';
+import session from 'express-session';
 import passport from 'passport';
 import keys from './config/keys.js';
 import './models/User.js';
@@ -19,9 +19,13 @@ mongoose.connect(keys.mongoURI)
 const app = express();
 
 app.use(
-  cookieSession({
-    maxAge: 30 * 24 * 60 * 1000,
-    keys: [keys.cookieKey]// the array allows option to provide multiple keys for extra security
+  session({ // Use session here
+    secret: keys.cookieKey, // Use your secret key here
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 30 * 24 * 60 * 1000, // Set cookie maxAge
+    },
   })
 );
 
