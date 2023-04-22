@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Logo from '../img/logo-white.svg'
+import Logo from '/img/logo-white.svg'
 
 
 const NavLinksHead = ({auth}) => {

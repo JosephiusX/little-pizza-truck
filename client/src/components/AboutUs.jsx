@@ -1,37 +1,37 @@
 import React from 'react';
 
-import image from '../img/gallery.jpg';
-import imageLarge from '../img/gallery.jpg';
+import image from '/img/gallery.webp';
+import imageLarge from '/img/gallery.webp';
 
-import image1 from '../img/gallery1.jpg';
-import image1Large from '../img/gallery1-large.jpg';
+import image1 from '/img/gallery1.webp';
+import image1Large from '/img/gallery1-large.webp';
 
-import image2 from '../img/gallery2.jpg';
-import image2Large from '../img/gallery2-large.jpg';
+import image2 from '/img/gallery2.webp';
+import image2Large from '/img/gallery2-large.webp';
 
-import image3 from '../img/gallery3.jpg';
-import image3Large from '../img/gallery3-large.jpg';
+import image3 from '/img/gallery3.webp';
+import image3Large from '/img/gallery3-large.webp';
 
-import image4 from '../img/gallery4.jpg';
-import image4Large from '../img/gallery4-large.jpg';
+import image4 from '/img/gallery4.webp';
+import image4Large from '/img/gallery4-large.webp';
 
-import image5 from '../img/gallery5.jpg';
-import image5Large from '../img/gallery5-large.jpg';
+import image5 from '/img/gallery5.webp';
+import image5Large from '/img/gallery5-large.webp';
 
-import image6 from '../img/gallery6.jpg';
-import image6Large from '../img/gallery6-large.jpg';
+import image6 from '/img/gallery6.webp';
+import image6Large from '/img/gallery6-large.webp';
 
-import image7 from '../img/gallery7.jpg';
-import image7Large from '../img/gallery7-large.jpg';
+import image7 from '/img/gallery7.webp';
+import image7Large from '/img/gallery7-large.webp';
 
-import image8 from '../img/gallery8.jpg';
-import image8Large from '../img/gallery8-large.jpg';
+import image8 from '/img/gallery8.webp';
+import image8Large from '/img/gallery8-large.webp';
 
-import image9 from '../img/gallery9.jpg';
-import image9Large from '../img/gallery9-large.jpg';
+import image9 from '/img/gallery9.webp';
+import image9Large from '/img/gallery9-large.webp';
 
-import image10 from '../img/gallery10.jpg';
-import image10Large from '../img/gallery10-large.jpg';
+import image10 from '/img/gallery10.webp';
+import image10Large from '/img/gallery10-large.webp';
 
 const AboutUs = () => {
   return (
