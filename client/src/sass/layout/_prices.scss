@@ -4,7 +4,7 @@
       to right bottom,
       rgba($color-grey-dark-2, 0.7),
       rgba($color-grey-dark-3, 0.3)),
-  url(../img/truck-bridge.jpg);
+  url(/img/truck-bridge.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -42,7 +42,7 @@ only screen and (min-width: 125em) {
     to right bottom,
     rgba($color-grey-dark-2, 0.7),
     rgba($color-grey-dark-3, 0.3)),
-          url(../img/truck-bridge-large.jpg);
+          url(/img/truck-bridge-large.webp);
           // ackground-size: cover;
           background-position-y: -95rem;
           position: relative;
