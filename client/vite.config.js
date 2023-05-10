@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      input: './src/main.jsx',
+      input: './src/index.html',
     },
     sourcemap: true,
   },
