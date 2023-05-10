@@ -1,32 +1,24 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
-import { splitVendorChunkPlugin } from 'vite';
 import path from 'path';
+import reactRefresh from '@vitejs/plugin-react-refresh';
 
 export default defineConfig({
-  entry: './src/main.jsx',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+  plugins: [react(), WindiCSS(), reactRefresh()],
+  build: {
+    rollupOptions: {
+      input: 'C:/Users/josep/OneDrive/Desktop/little-pizza-truck/server/client/public/index.html',
+    },
+    sourcemap: true,
   },
-  plugins: [
-    react(),
-    WindiCSS(),
-    splitVendorChunkPlugin()
-  ],
-  sourcemap: true,
-  alias: {
-    '~': path.resolve(__dirname, 'src')
-  },
-  rollupInputOptions: {
-    input: './src/main.js'
-  },
-  rollupOutputOptions: {
-    format: 'es'
+  resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src'),
+    },
   },
   optimizeDeps: {
-    include: ['lodash']
+    include: ['lodash'],
   },
   server: {
     port: 3000,
@@ -42,46 +34,12 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
-    css: {
-      preprocessorOptions: {
-        sass: {
-          indentedSyntax: true
-        }
-      }
+  },
+  css: {
+    preprocessorOptions: {
+      sass: {
+        indentedSyntax: true,
+      },
     },
   },
 });
-
-
-// https://vitejs.dev/config/
-// export default defineConfig({
-//   server: {
-//     port: 3000 // listen on port 3000
-//   },
-//   proxy: {
-//     '/api': {
-//       target: 'http://localhost:5000',
-//       changeOrigin: true,
-//       rewrite: path => path.replace(/^\/api/, '')
-//     }
-//   },
-//   plugins: [
-//     react(),
-//   ],
-  
-// })
-
-
-// export default defineConfig({
-//   plugins: [react()],
-//   server: {
-//     port: 3000,
-//     proxy: {
-//       '/api': {
-//         target: 'http://localhost:5000',
-//         changeOrigin: true,
-//         rewrite: (path) => path.replace(/^\/api/, ''),
-//       },
-//     },
-//   },
-// });
