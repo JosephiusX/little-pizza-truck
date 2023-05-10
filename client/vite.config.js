@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
-
 import { splitVendorChunkPlugin } from 'vite'
-// export default defineConfig({
-//   plugins: [splitVendorChunkPlugin()],
-// })
+import path from 'path';
 
 export default defineConfig({
   entry: './src/main.jsx',
@@ -32,12 +29,12 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
-      css: {
-        preprocessorOptions: {
-          sass: {
-            indentedSyntax: true
-          }
+    css: {
+      preprocessorOptions: {
+        sass: {
+          indentedSyntax: true
         }
+      }
     },
   },
 });
