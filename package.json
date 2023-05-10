@@ -6,10 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
+    "serve": "serve dist",
     "client": "npm run start --prefix client",
     "build": "vite build",
     "build-client": "npm run build --prefix client",
-    "dev": "npm run build-client && concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run build-client && concurrently \"npm run serve\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": " <josephiusx@gmail.com>",
