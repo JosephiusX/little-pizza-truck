@@ -1,13 +1,17 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
-// import ImageMin from 'vite-plugin-imagemin';
-import Visualizer from 'rollup-plugin-visualizer'; // Make sure you have this line
+
+import { splitVendorChunkPlugin } from 'vite'
+// export default defineConfig({
+//   plugins: [splitVendorChunkPlugin()],
+// })
 
 export default defineConfig({
   plugins: [
     react(),
     WindiCSS(),
+    splitVendorChunkPlugin()
   ],
   server: {
     port: 3000,
