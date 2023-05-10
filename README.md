@@ -150,7 +150,7 @@ Cream, fior di latte, hen of the woods, garlic, radicchio, chives.
 The Squash
 20
 Cipollini, grana, fior de latte, delicata. 
-
+  dd
 The Patata
 22
 Black truffle cream, fontina, yukon potatoes, guanciale, pickled red onions. 
