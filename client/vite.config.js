@@ -9,6 +9,10 @@ import { splitVendorChunkPlugin } from 'vite'
 
 export default defineConfig({
   entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
   plugins: [
     react(),
     WindiCSS(),
