@@ -16,6 +16,18 @@ export default defineConfig({
     splitVendorChunkPlugin()
   ],
   sourcemap: true,
+  alias: {
+    '~': path.resolve(__dirname, 'src')
+  },
+  rollupInputOptions: {
+    input: './src/main.js'
+  },
+  rollupOutputOptions: {
+    format: 'es'
+  },
+  optimizeDeps: {
+    include: ['lodash']
+  },
   server: {
     port: 3000,
     proxy: {
