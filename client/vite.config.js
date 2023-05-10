@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
-import { splitVendorChunkPlugin } from 'vite'
+import { splitVendorChunkPlugin } from 'vite';
 import path from 'path';
 
 export default defineConfig({
@@ -15,6 +15,7 @@ export default defineConfig({
     WindiCSS(),
     splitVendorChunkPlugin()
   ],
+  sourcemap: true,
   server: {
     port: 3000,
     proxy: {
@@ -38,7 +39,6 @@ export default defineConfig({
     },
   },
 });
-
 
 
 // https://vitejs.dev/config/
