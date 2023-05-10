@@ -8,6 +8,7 @@ import { splitVendorChunkPlugin } from 'vite'
 // })
 
 export default defineConfig({
+  entry: './src/index.js',
   plugins: [
     react(),
     WindiCSS(),
