@@ -8,7 +8,7 @@ import { splitVendorChunkPlugin } from 'vite'
 // })
 
 export default defineConfig({
-  entry: './src/index.js',
+  entry: './src/main.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
