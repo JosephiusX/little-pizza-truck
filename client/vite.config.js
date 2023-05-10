@@ -19,7 +19,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      input: 'server\client\public\index.html',
+      input: './public/index.html',
     },
     sourcemap: true,
   },
