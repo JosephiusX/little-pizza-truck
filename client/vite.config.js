@@ -11,6 +11,9 @@ export default defineConfig({
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  server: {
+    port: 3000
+  },
   plugins: [
     react(),
     WindiCSS(),
@@ -29,20 +32,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['lodash']
   },
-  server: {
-    port: 3000,
-    proxy: {
-      '/auth': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/auth/, '/auth'),
-      },
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/api'),
-      },
-    },
     css: {
       preprocessorOptions: {
         sass: {
@@ -51,4 +40,4 @@ export default defineConfig({
       }
     },
   },
-});
+);

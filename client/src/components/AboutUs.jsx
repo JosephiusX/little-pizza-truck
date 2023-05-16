@@ -1,37 +1,37 @@
 import React from 'react';
 
-import image from '/img/gallery.webp';
-import imageLarge from '/img/gallery.webp';
+import image from '../assets/img/gallery.webp';
+import imageLarge from '../assets/img/gallery.webp';
 
-import image1 from '/img/gallery1.webp';
-import image1Large from '/img/gallery1-large.webp';
+import image1 from '../assets/img/gallery1.webp';
+import image1Large from '../assets/img/gallery1-large.webp';
 
-import image2 from '/img/gallery2.webp';
-import image2Large from '/img/gallery2-large.webp';
+import image2 from '../assets/img/gallery2.webp';
+import image2Large from '../assets/img/gallery2-large.webp';
 
-import image3 from '/img/gallery3.webp';
-import image3Large from '/img/gallery3-large.webp';
+import image3 from '../assets/img/gallery3.webp';
+import image3Large from '../assets/img/gallery3-large.webp';
 
-import image4 from '/img/gallery4.webp';
-import image4Large from '/img/gallery4-large.webp';
+import image4 from '../assets/img/gallery4.webp';
+import image4Large from '../assets/img/gallery4-large.webp';
 
-import image5 from '/img/gallery5.webp';
-import image5Large from '/img/gallery5-large.webp';
+import image5 from '../assets/img/gallery5.webp';
+import image5Large from '../assets/img/gallery5-large.webp';
 
-import image6 from '/img/gallery6.webp';
-import image6Large from '/img/gallery6-large.webp';
+import image6 from '../assets/img/gallery6.webp';
+import image6Large from '../assets/img/gallery6-large.webp';
 
-import image7 from '/img/gallery7.webp';
-import image7Large from '/img/gallery7-large.webp';
+import image7 from '../assets/img/gallery7.webp';
+import image7Large from '../assets/img/gallery7-large.webp';
 
-import image8 from '/img/gallery8.webp';
-import image8Large from '/img/gallery8-large.webp';
+import image8 from '../assets/img/gallery8.webp';
+import image8Large from '../assets/img/gallery8-large.webp';
 
-import image9 from '/img/gallery9.webp';
-import image9Large from '/img/gallery9-large.webp';
+import image9 from '../assets/img/gallery9.webp';
+import image9Large from '../assets/img/gallery9-large.webp';
 
-import image10 from '/img/gallery10.webp';
-import image10Large from '/img/gallery10-large.webp';
+import image10 from '../assets/img/gallery10.webp';
+import image10Large from '../assets/img/gallery10-large.webp';
 
 const AboutUs = () => {
   return (
