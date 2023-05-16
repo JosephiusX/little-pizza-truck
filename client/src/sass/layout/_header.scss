@@ -4,7 +4,7 @@
         to right bottom,
         rgba($color-grey-dark-2, 0.7),
         rgba($color-grey-dark-3, 0.3)),
-    url(/img/truck-smoke.webp);
+    url("/src/assets/img/truck-smoke.webp");
     background-size: cover;
     background-position: bottom;
     position: relative;
@@ -23,7 +23,7 @@
             to right bottom,
             rgba($color-grey-dark-2, 0.5),
             rgba($color-grey-dark-3, 0.9)),
-            url(/img/truck-smoke-large.webp);
+            url("/src/assets/img/truck-smoke-large.webp");
             background-position: bottom;
     }
 

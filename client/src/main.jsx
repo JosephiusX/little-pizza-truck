@@ -8,11 +8,13 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App'
 import reducers from './reducers';
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));// 1st arg-reducers(=> fn returning an array),2nd Arg-initial state(empty object), 3rd- applyMiddleware
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk)); // 1st arg-reducers(=> fn returning an array),2nd Arg-initial state(empty object), 3rd- applyMiddleware
 
-ReactDOM.render(
-<Provider 
-  store={store}><App />
-</Provider>, // Provider reads changes from our redux store. 
-  document.querySelector('#root')
+const rootContainer = document.querySelector('#root');
+const root = ReactDOM.createRoot(rootContainer);
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

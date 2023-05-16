@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import WindiCSS from 'vite-plugin-windicss';
 import { splitVendorChunkPlugin } from 'vite';
 import path from 'path';
-// import reactRefresh from '@vitejs/plugin-react-refresh'
 
 export default defineConfig({
   entry: './src/main.jsx',
@@ -12,13 +11,27 @@ export default defineConfig({
     filename: 'bundle.js'
   },
   server: {
-    port: 3000
+    port: 3000,
+    proxy: {
+      // With options
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/auth/google': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+      '/auth/google/callback': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [
     react(),
     WindiCSS(),
     splitVendorChunkPlugin(),
-    // reactRefresh()
   ],
   build: {
     rollupOptions: {
@@ -32,12 +45,11 @@ export default defineConfig({
   optimizeDeps: {
     include: ['lodash']
   },
-    css: {
-      preprocessorOptions: {
-        sass: {
-          indentedSyntax: true
-        }
+  css: {
+    preprocessorOptions: {
+      sass: {
+        indentedSyntax: true
       }
-    },
+    }
   },
-);
+});
