@@ -12,35 +12,37 @@ import { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-import authRoutes from './routes/authRoutes.js';
-
-mongoose.connect(keys.mongoURI)
+mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(
-  session({ // Use session here
-    secret: keys.cookieKey, // Use your secret key here
+  session({
+    secret: keys.cookieKey,
     resave: false,
     saveUninitialized: true,
     cookie: {
-      maxAge: 30 * 24 * 60 * 1000, // Set cookie maxAge
+      maxAge: 30 * 24 * 60 * 60 * 1000,
     },
   })
 );
 
-app.use(passport.initialize()); // these middleware run for every request
+app.use(passport.initialize());
 app.use(passport.session());
 
-authRoutes(app); // Routes from authRoutes, Directly required instead of named
+import authRoutes from './routes/authRoutes.js';
+authRoutes(app);
 
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
-});
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
-
-const PORT = process.env.PORT || 5000
-app.listen(PORT)
-
+const PORT = process.env.PORT || 5000;
+app.listen(PORT);
