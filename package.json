@@ -7,7 +7,7 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "serve": "serve dist",
-    "client": "npm run start --prefix client",
+    "client": "npm run build --prefix client && npm run serve --prefix client",
     "build": "vite build",
     "build-client": "npm run build --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
